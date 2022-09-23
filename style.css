@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  background: #434343;
+  height: 100vh;
+  font-family: 'Anonymous Pro', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal {
+  background: #282828;
+  width: 600px;
+  height: 300px;
+  border-radius: 8px;
+  overflow-x: hide;
+  overflow-y: auto;
+}
+
+.terminal > p{
+  padding-left: 5px;
+  color: #ebdbb2;
+  font-size: 12px;
+  padding-top: 3px;
+  margin-top: 25px;
+}
+
+p > span {
+  color: #458588;
+  font-weight: bold;
+}
+
+p > error {
+  color: #fa615c;
+}
+
+p > b1 {
+  color: #98971a;
+  font-weight: bold;
+}
+
+p {
+  color: #ebdbb2;
+  padding-top: 1%;
+}
+
+.buttons {
+  background: #303030;
+  border-radius: 8px 8px 0px 0px;
+  padding-left: 15px;
+  padding-top: 5px;
+  display: flex;
+  position: fixed;
+  width: 600px;
+}
+
+.red {
+  background: #fa615c;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.yellow {
+  background: #ffbd48;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  margin-top: 2px;
+  margin-right: 5px;
+}
+
+.green {
+  background: #3fc950;
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  margin-top: 2px;
+}
+
+input {
+  width: 75%;
+  background: none;
+  outline: none;
+  border: none;
+  color: #999;
+  letter-spacing: 1px;
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  caret-color: transparent;
+}
+
+label[for="command"] {
+  color: #98971a;
+  padding-left: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.heading {
+  color: #888;
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 4px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0 100px 50px 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.commands {
+  color: #ebdbb2;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
