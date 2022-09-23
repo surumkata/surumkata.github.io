@@ -43,21 +43,50 @@ document.addEventListener('keydown', function(e) {
       var insta_desc = text('go to my instagram.');
       insta_desc.style.paddingLeft = "73px";
       insta.appendChild(insta_desc);
+      //ls - show files
+      const ls = document.createElement("p");
+      ls.style.paddingLeft = "15px";
+      ls.appendChild(span('ls'));
+      var ls_desc = text('show files.');
+      ls_desc.style.paddingLeft = "93px";
+      ls.appendChild(ls_desc);
+      //cat - view file
+      const cat = document.createElement("p");
+      cat.appendChild(span('cat [file]'));
+      var cat_desc = text('view a file.');
+      cat_desc.style.paddingLeft = "40px";
+      cat.appendChild(cat_desc);
       //append various commands
       document.querySelector(".commands").appendChild(p).appendChild(help).appendChild(git).appendChild(tt).appendChild(ld).appendChild(insta);
+      document.querySelector(".commands").appendChild(ls).appendChild(cat);
     //CODE GIT
     }else if(input.value === 'git'){
       window.open('https://github.com/surumkata', '_blank');
     //CODE TWITTER
     }else if(input.value === 'tt'){
       window.open('https://twitter.com/imgeremias', '_blank');
-
+    //CODE LINKEDIN
     }else if(input.value === 'ld'){
       window.open('https://www.linkedin.com/in/tiago-silva-48b244248/', '_blank');
-
+    //CODE INSTAGRAM
     }else if(input.value === 'insta'){
       window.open('https://www.instagram.com/surumkata/', '_blank');
-
+    //CODE LS
+    }else if(input.value === 'ls'){
+      //Supported commands:
+      const p = document.createElement("p");
+      p.style.display = 'block';
+      p.appendChild(bold('files: '));
+      p.appendChild(b1('motosauro.md'));
+      p.appendChild(text(', '));
+      p.appendChild(b1('rastros.md'));
+      document.querySelector(".commands").appendChild(p);
+    //CODES CAT
+    //CODE CAT MOTOSAURO.MD
+    }else if(input.value === 'cat motosauro.md'){
+      window.open('https://github.com/surumkata/motosauro/blob/main/README.md', '_blank');
+    }else if(input.value === 'cat rastros.md'){
+      window.open('https://github.com/surumkata/rastros/blob/master/README.md', '_blank');
     }else{
       const p = document.createElement("p");
       p.style.display = 'block';
