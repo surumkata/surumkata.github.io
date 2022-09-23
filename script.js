@@ -19,28 +19,40 @@ document.addEventListener('keydown', function(e) {
       var help_desc = text('show commands.');
       help_desc.style.paddingLeft = "80px";
       help.appendChild(help_desc);
-      //github - go to my github
+      //git - go to my github
       const git = document.createElement("p");
       git.appendChild(span('git'));
       var git_desc = text('go to my github.');
       git_desc.style.paddingLeft = "87px";
       git.appendChild(git_desc);
-      //twitter - go to my tt
-      const twitter = document.createElement("p");
-      twitter.appendChild(span('twitter'));
-      var twitter_desc = text('go to my twitter.');
-      twitter_desc.style.paddingLeft = "61px";
-      twitter.appendChild(twitter_desc);
+      //tt - go to my tt
+      const tt = document.createElement("p");
+      tt.appendChild(span('tt'));
+      var tt_desc = text('go to my twitter.');
+      tt_desc.style.paddingLeft = "93px";
+      tt.appendChild(tt_desc);
+      //ld - go to my linkedin
+      const ld = document.createElement("p");
+      ld.appendChild(span('ld'));
+      var ld_desc = text('go to my linkedin.');
+      ld_desc.style.paddingLeft = "93px";
+      ld.appendChild(ld_desc);
+      //insta - go to my linkedin
+      const insta = document.createElement("p");
+      insta.appendChild(span('insta'));
+      var insta_desc = text('go to my instagram.');
+      insta_desc.style.paddingLeft = "73px";
+      insta.appendChild(insta_desc);
       //append various commands
-      document.querySelector(".commands").appendChild(p).appendChild(help).appendChild(git).appendChild(twitter);
+      document.querySelector(".commands").appendChild(p).appendChild(help).appendChild(git).appendChild(tt).appendChild(ld).appendChild(insta);
     //CODE GIT
     }else if(input.value === 'git'){
       window.open('https://github.com/surumkata', '_blank');
     //CODE TWITTER
-    }else if(input.value === 'twitter'){
+    }else if(input.value === 'tt'){
       window.open('https://twitter.com/imgeremias', '_blank');
 
-    }else if(input.value === 'linkedin'){
+    }else if(input.value === 'ld'){
       window.open('https://www.linkedin.com/in/tiago-silva-48b244248/', '_blank');
 
     }else if(input.value === 'insta'){
