@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href="motosauro.html" rel="import" />
 <link rel="stylesheet" href="style.css">
+<script>
+$(function () {
+  var includes = $('[data-include]')
+  $.each(includes, function () {
+    var file = 'views/' + $(this).data('include') + '.html'
+    $(this).load(file)
+  })
+})
+</script>
 </head>
-<body>
-  <div class="container">
+<body style="background: #434343;">
+  <div id="terminal" class="container">
     <div class="terminal" onClick='f();'>
       <div class="toolbar">
         <div class="buttons">
@@ -18,10 +28,106 @@
         Welcome to <b1>surumkata</b1>'s portfolio — Type <span>help</span> for a list of supported commands.
       </p>
             <div class="commands"></div>
+
       <label for="command">~   <label>
       <input id="command" type="text" autoComplete="off" autofocus/>
     </div>
+    <div id="pagecontainer" class="container">
+      <div data-include="motosauro" id="page1" class="page">
+        <p align="center">
+          <img style="width:450px;height:auto" src=https://user-images.githubusercontent.com/57015073/192119678-be6200c2-bdde-4ae6-86eb-ddfe6cd9cd73.png>
+        </p>
+
+        <h3 align="center">Projeto de Laboratórios de Informática 1</h3>
+        <h3 align="center"> Recriação do jogo &quot;ExciteBike&quot;</h3>
+        <h3 align="center">Ano letivo de 2019/2020</h3>
+        <h3>--------------------------------------------</h3>
+        <p><span>Excitebike</span> é um jogo de corrida de motocross desenvolvido pela Nintendo. Foi lançado no Japão para o Family Computer em 1984 e foi um dos títulos de lançamento para o NES em 1985.</p>
+        <p>O objetivo deste projeto de <span>Laboratórios de Informática 1</span> era a recriação desse jogo, utilizando a linguagem de programação <span>Haskell</span>, assim, colocando em prática os ensinamentos obtidos ao longo das diferentes cadeiras do semestre, como <span>Programação Funcional</span>.  Por conta das mudanças gráficas decidimos apelidar a nossa nova versão de <span>&quot;Motosauro&quot;</span>.</p>
+        <p>Este trabalho foi realizado por Tiago Silva e Hugo Fernandes, estudantes do 1º ano de engenharia informática da Universidade do Minho no ano letivo de 2019/2020.</p>
+        <p></p>
+        <h4>Jogabilidade</h4>
+        <h4>----------------------------------------------------</h4>
+        <p>No Motosauro as corridas são de sempre 4 motas, pudendo elas serem controladas por jogadores em tela compartilhada e/ou por bots.
+        O jogo é simples, o jogador pode movimentar a moto entre pistas (<span>cima</span> e <span>baixo</span>), <span>acelerar</span> e <span>desacelerar</span>, inclinar a moto enquanto estiver no ar (<span>esquerda</span> e <span>direita</span>), e por fim, pode ainda <span>disparar</span> <span>cola</span> (4 munições por corrida) para o piso atrás dele de modo a atrasar as outras motas. De realçar que, se o jogador cai do ar numa inclinação muito torta, este fica <span>morto</span> durante alguns segundos.
+        Por falar em pisos, o jogo conta com 5 tipos de pisos diferentes, que servem para alterar a velocidade da mota. Do piso mais lento para o mais rápido são: <span>Cola, Lama, Relva, Terra e Boost</span>
+        Finalizando, o jogo conta ainda com 2 tipos de mapas, os <span>padrões</span>, criados por nós, e os <span>gerados</span> que necessitam de uma <span>seed</span> e um <span>tamanho</span>.</p>
+        <p></p>
+        <h4>Parte Gráfica</h4>
+        <h4>----------------------------------------------------</h4>
+        <h4 align="center">Menus</h4>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191846460-a72741d2-11bf-4511-8422-035e65ad3734.gif>
+        <h5 align="center">Menu Inicial do Jogo</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191835109-abf92924-0ab2-4291-858d-314f401bb86f.png>
+        <h5 align="center">Menu dos Controlos</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191846465-e8460021-9b26-4513-8528-bdcaae0f0473.gif>
+        <h5 align="center">Menu de Escolha de Tipo de Mapa</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191846470-a5464980-c1aa-4ffa-b43c-c4ad99205586.gif>
+        <h5 align="center">Menu de Escolha de (Default) Mapa</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191846468-5a973e1c-a23c-46e8-998c-74bd90b90c81.gif>
+        <h5 align="center">Menu de Escolha de Quantidade de Jogadores</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191835897-4e4e8333-1174-4b78-957b-0ef616d87577.png>
+        <h5 align="center">Decorrer de uma Corrida</h5>
+        <p></p>
+        <img class="print" src=https://user-images.githubusercontent.com/57015073/191842314-612d62c3-30a3-4964-9106-c79399d9ad12.png>
+        <h5 align="center">Fim de uma Corrida</h5>
+
+        <h4 align="center">Motos</h4>
+        <img style="margin-left:115px;width: 50%;height: auto" src=https://user-images.githubusercontent.com/57015073/191842538-12dd76be-c368-4418-8e10-d3c4d1ed6e16.png>
+        <h5 align="center">Moto Jogador 1</h5>
+        <p></p>
+        <img style="margin-left:115px;width: 50%;height: auto" src=https://user-images.githubusercontent.com/57015073/191842540-cc1f2a31-adb7-4c81-8555-49862e960aa8.png>
+        <h5 align="center">Moto Jogador 2</h5>
+        <p></p>
+        <img style="margin-left:115px;width: 50%;height: auto" src=https://user-images.githubusercontent.com/57015073/191842543-b77f9d0d-82e2-4f37-be05-31cbb89ce2e0.png>
+        <h5 align="center">Moto Jogador 3</h5>
+        <p></p>
+        <img style="margin-left:115px;width: 50%;height: auto" src=https://user-images.githubusercontent.com/57015073/191842545-6e3b4fe7-b4dd-4d8f-abf5-98eb570aee33.png>
+        <h5 align="center">Moto Jogador 4</h5>
+        <p></p>
+        <img style="margin-left:115px;width: 50%;height: auto" src=https://user-images.githubusercontent.com/57015073/191842826-0d1fa6a2-b57f-49d8-ae4f-19297a5f6f80.png>
+        <h5 align="center">Jogador Morto</h5>
+        <p></p>
+        
+        <h3><a href="https://github.com/surumkata/Motosauro/tree/main/textures/Layers">Pisos</a></h3>
+        <p></p>
+        <h4>Glossário de Tarefas</h4>
+        <h4>----------------------------------------------------</h4>
+        <p><span>TAREFA 1</span> Gerar um mapa aleatório.</p>
+        <p style="margin-top: 0px;"><span>TAREFA 2</span> Criação dos tipos de jogadas. (Andar para todas as direções, acelerar, desacelerar e disparar munições de cola para a retaguarda)</p>
+        <p style="margin-top: 0px;"><span>TAREFA 3</span> Compressão de mapas.</p>
+        <p style="margin-top: 0px;"><span>TAREFA 4</span> Efeito da passagem do tempo num estado do jogo.</p>
+        <p style="margin-top: 0px;"><span>TAREFA 5</span> Recriação gráfica do jogo através da biblioteca Gloss.</p>
+        <p style="margin-top: 0px;"><span>TAREFA 6</span> Criação do bot.</p>
+        <p></p>
+      </div>
+    </div>
+    <div id="pagecontainer" class="container">
+      <div id="page2" class="page">
+        <h2 id="rastros-projeto-de-laborat-rios-de-inform-tica-2-li2-recria-o-do-jogo-rastros-ano-letivo-de-2019-2020-grupo-1-pl4">Rastros - Projeto de Laboratórios de Informática 2 (LI2) - Recriação do jogo &quot;Rastros&quot; - Ano letivo de 2019/2020 - Grupo 1 / PL4</h2>
+          <p><img src="https://user-images.githubusercontent.com/61991247/97790654-3b741200-1bc2-11eb-9fdc-28eafc234d3e.png" alt="Captura de ecrã de 2020-10-31 21-35-39"></p>
+            <h1 id="elementos-do-grupo">Elementos do grupo</h1>
+            <ul>
+              <li>a78778 Adélio José Ferreira Fernandes</li>
+              <li>a93277 Tiago Luís Dias da Silva</li>
+              <li>a93262 Simão Pedro Sá Cunha</li>
+            </ul>
+            <h1 id="gloss-rio-dos-documentos">Glossário dos documentos</h1>
+            <pre><code>- logica.c : Módulo da lógica <span class="hljs-keyword">do</span> jogo e das <span class="hljs-function"><span class="hljs-keyword">fun</span>çõ<span class="hljs-title">es</span></span> que o manipulam - efetuar jogadas, avanço e retrocesso de jogadas e aplicação de heurísticas para o bot
+                       - dados.c : Definição <span class="hljs-keyword">do</span> estado e das <span class="hljs-function"><span class="hljs-keyword">fun</span>çõ<span class="hljs-title">es</span></span> que o manipulam - tabuleiro no inicio <span class="hljs-keyword">do</span> jogo, alteração <span class="hljs-keyword">do</span> mesmo, etc
+                       - interface.c : Módulo da interface <span class="hljs-keyword">do</span> jogo e das <span class="hljs-function"><span class="hljs-keyword">fun</span>çõ<span class="hljs-title">es</span></span> que o manipulam - desenho <span class="hljs-keyword">do</span> tabuleiro, prompt <span class="hljs-keyword">do</span> jogo e gravação de jogos em ficheiros de texto
+                       - listas.c : Módulo de listas ligadas <span class="hljs-keyword">do</span> jogo e das <span class="hljs-function"><span class="hljs-keyword">fun</span>çõ<span class="hljs-title">es</span></span> que o manipulam - <span class="hljs-function"><span class="hljs-keyword">fun</span>çõ<span class="hljs-title">es</span></span> auxiliares
+                       - Ficheiro <span class="hljs-keyword">do</span> <span class="hljs-symbol">bot:</span> inclui tudo para o funcionamento <span class="hljs-keyword">do</span> bot para o torneio <span class="hljs-keyword">do</span> <span class="hljs-number">1</span>º ano de MIEI
+                     </code></pre>
+      </div>
+    </div>
   </div>
   <script src="script.js"></script>
-</body>
+  </body>
 </html>

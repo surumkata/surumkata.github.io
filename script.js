@@ -1,3 +1,5 @@
+var cat = new Boolean(false);
+
 const input = document.querySelector('input');
 document.addEventListener('keydown', function(e) {
   if(e.keyCode === 13 && input.value){
@@ -5,6 +7,14 @@ document.addEventListener('keydown', function(e) {
     node.style.color = "#888";
     node.style.fontSize = "12px";
     node.style.paddingLeft = '5px';
+
+    if(cat == true){
+      cat = false;
+      document.getElementById('page1').style.width = "0px";
+      document.getElementById('page1').style.height = "0px";
+      document.getElementById('page2').style.width = "0px";
+      document.getElementById('page2').style.height = "0px";
+    }
 
     //CODE HELP
     if(input.value === 'help'){
@@ -84,9 +94,17 @@ document.addEventListener('keydown', function(e) {
     //CODES CAT
     //CODE CAT MOTOSAURO.MD
     }else if(input.value === 'cat motosauro.md'){
-      window.open('https://github.com/surumkata/motosauro/blob/main/README.md', '_blank');
+        if(cat == false){
+          cat = true;
+          document.getElementById('page1').style.width = "470px";
+          document.getElementById('page1').style.height = "600px";
+        }
     }else if(input.value === 'cat rastros.md'){
-      window.open('https://github.com/surumkata/rastros/blob/master/README.md', '_blank');
+        if(cat == false){
+          cat = true;
+          document.getElementById('page2').style.width = "470px";
+          document.getElementById('page2').style.height = "600px";
+        }
     }else{
       const p = document.createElement("p");
       p.style.display = 'block';
