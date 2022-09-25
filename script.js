@@ -1,4 +1,8 @@
-var cat = new Boolean(false);
+var cat = new Array(2);
+
+for(let i = 0; i < 2; i++){
+  cat[i] = new Boolean(false);
+}
 
 const input = document.querySelector('input');
 document.addEventListener('keydown', function(e) {
@@ -8,12 +12,13 @@ document.addEventListener('keydown', function(e) {
     node.style.fontSize = "12px";
     node.style.paddingLeft = '5px';
 
-    if(cat == true){
-      cat = false;
-      document.getElementById('page1').style.width = "0px";
-      document.getElementById('page1').style.height = "0px";
-      document.getElementById('page2').style.width = "0px";
-      document.getElementById('page2').style.height = "0px";
+    for(let i = 1; i <= 2; i++){
+      if(cat[i-1] == true){
+        cat[i-1] = false;
+        document.getElementById('page' + i).style.width = "0px";
+        document.getElementById('page' + i).style.height = "0px";
+        document.getElementById('page' + i).style.opacity = "0%";
+      }
     }
 
     //CODE HELP
@@ -94,16 +99,18 @@ document.addEventListener('keydown', function(e) {
     //CODES CAT
     //CODE CAT MOTOSAURO.MD
     }else if(input.value === 'cat motosauro.md'){
-        if(cat == false){
-          cat = true;
+        if(cat[0] == false){
+          cat[0] = true;
           document.getElementById('page1').style.width = "470px";
           document.getElementById('page1').style.height = "600px";
+          document.getElementById('bpage1').style.opacity = "100%";
         }
     }else if(input.value === 'cat rastros.md'){
-        if(cat == false){
-          cat = true;
+        if(cat[1] == false){
+          cat[1] = true;
           document.getElementById('page2').style.width = "470px";
           document.getElementById('page2').style.height = "600px";
+          document.getElementById('bpage2').style.opacity = "100%";
         }
     }else{
       const p = document.createElement("p");
