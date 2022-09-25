@@ -17,7 +17,7 @@ document.addEventListener('keydown', function(e) {
         cat[i-1] = false;
         document.getElementById('page' + i).style.width = "0px";
         document.getElementById('page' + i).style.height = "0px";
-        document.getElementById('page' + i).style.opacity = "0%";
+        document.getElementById('bpage' + i).style.opacity = "0%";
       }
     }
 
