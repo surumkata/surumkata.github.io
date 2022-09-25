@@ -3,19 +3,10 @@
 <head>
 <link href="motosauro.html" rel="import" />
 <link rel="stylesheet" href="style.css">
-<script>
-$(function () {
-  var includes = $('[data-include]')
-  $.each(includes, function () {
-    var file = 'views/' + $(this).data('include') + '.html'
-    $(this).load(file)
-  })
-})
-</script>
 </head>
 <body style="background: #434343;">
   <div id="terminal" class="container">
-    <div class="terminal" onClick='f();'>
+    <div class="terminal">
       <div class="toolbar">
         <div class="buttons">
           <div class="red"></div>
