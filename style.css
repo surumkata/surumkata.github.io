@@ -61,12 +61,12 @@ p > span {
 }
 
 a{
-  color: #458588;
+  color: #98971a;
   font-weight: bold;
   text-decoration:none;
 }
 a:hover {
-  color: #98971a;
+  color: #458588;
 }
 
 p > error {

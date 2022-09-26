@@ -105,6 +105,7 @@ document.addEventListener('keydown', function(e) {
           document.getElementById('page1').style.height = "600px";
           document.getElementById('bpage1').style.opacity = "100%";
         }
+    //CODE CAT RASTROS.MD
     }else if(input.value === 'cat rastros.md'){
         if(cat[1] == false){
           cat[1] = true;
@@ -115,9 +116,9 @@ document.addEventListener('keydown', function(e) {
     }else{
       const p = document.createElement("p");
       p.style.display = 'block';
-      p.appendChild(error("command "));
-      p.appendChild(bold(input.value));
-      p.appendChild(error(" not found"));
+      p.appendChild(text("Command "));
+      p.appendChild(error(input.value));
+      p.appendChild(text(" not found!"));
       document.querySelector(".commands").appendChild(p);
     }
     input.value = "";
