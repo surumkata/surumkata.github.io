@@ -113,6 +113,8 @@ document.addEventListener('keydown', function(e) {
           document.getElementById('page2').style.height = "600px";
           document.getElementById('bpage2').style.opacity = "100%";
         }
+    }else if(input.value === 'run space_invaders'){
+        window.location.replace("games/space_invaders/index.html");
     }else{
       const p = document.createElement("p");
       p.style.display = 'block';
